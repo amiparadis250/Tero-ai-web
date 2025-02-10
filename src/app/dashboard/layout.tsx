@@ -75,7 +75,7 @@ const SIDEBAR_ITEMS: MenuItem[] = [
     key: "voice-to-video",
     icon: <Speech size={20} />,
     label: "Voice to Video",
-    path: "/voice-to-video",
+    path: "dashboard/voice-to-video",
   },
   {
     key: "ai-chat",
@@ -122,7 +122,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   const [activeMenuKey, setActiveMenuKey] = useState(pathname);
 
   const mockUserProfile: UserProfile = {
-    full_names: "Martha J",
+    full_names: "Ami Paradis",
     profile_image:
       "https://res.cloudinary.com/dv9cz01fi/image/upload/v1738316635/lyh6k4nhu3sxe6t5u4ql.jpg",
   };

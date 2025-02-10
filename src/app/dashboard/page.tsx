@@ -1,10 +1,10 @@
 "use client";
-// import { useState } from "react";
+import TextPrompt from "@/components/video/prompt";
 
 const DashboardPage = () => {
   return (
     <div>
-      <h1>Welcome Tero Ai , the glance at the top</h1>
+      <TextPrompt />
     </div>
   );
 };
