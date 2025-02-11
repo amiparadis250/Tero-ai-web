@@ -38,7 +38,7 @@ import { AudioOutlined, StopOutlined, DeleteOutlined } from "@ant-design/icons";
   };
 
   const deleteRecording = () => {
-    setAudioURL(null); // Clear the recorded audio URL
+    setAudioURL(null); 
   };
 
   return (
@@ -59,7 +59,7 @@ import { AudioOutlined, StopOutlined, DeleteOutlined } from "@ant-design/icons";
             />
             {recording && (
               <div className="flex items-center gap-1.5">
-                {[1, 2, 3, 4].map((i) => (
+                {[1, 2, 3, 4,5, 6,9,10,11,12,13,14,15,16,17,18,19,20].map((i) => (
                   <div
                     key={i}
                     className="w-1.5 h-6 bg-blue-500 animate-wave"
