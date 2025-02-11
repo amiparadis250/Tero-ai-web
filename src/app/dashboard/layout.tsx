@@ -51,7 +51,7 @@ type MenuItem = {
 };
 
 const SIDEBAR_ITEMS: MenuItem[] = [
-  { key: "home", icon: <Home size={20} />, label: "Home", path: "/" },
+  { key: "home", icon: <Home size={20} />, label: "Home", path: "/dashboard" },
   {
     key: "notification",
     icon: <Bell size={20} />,

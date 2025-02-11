@@ -12,6 +12,17 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      // Add custom keyframes for the waveform animation
+      keyframes: {
+        wave: {
+          "0%, 100%": { transform: "scaleY(0.5)" },
+          "50%": { transform: "scaleY(1.5)" },
+        },
+      },
+      // Add custom animation utility
+      animation: {
+        wave: "wave 1.2s infinite ease-in-out",
+      },
     },
   },
   plugins: [],
