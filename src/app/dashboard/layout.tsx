@@ -52,42 +52,42 @@ type MenuItem = {
 
 const SIDEBAR_ITEMS: MenuItem[] = [
   { key: "home", icon: <Home size={20} />, label: "Home", path: "/dashboard" },
-  {
-    key: "notification",
-    icon: <Bell size={20} />,
-    label: "Notification",
-    path: "/notification",
-  },
+  // {
+  //   key: "notification",
+  //   icon: <Bell size={20} />,
+  //   label: "Notification",
+  //   path: "/dashboard/notification",
+  // },
   {
     key: "subscription",
     icon: <CreditCard size={20} />,
     label: "Subscription",
-    path: "/subscription",
+    path: "/dashboard/subscription",
   },
   { key: "divider-1", type: "divider" },
   {
     key: "text-to-video",
     icon: <Video size={20} />,
     label: "Text To Video",
-    path: "/text-to-video",
+    path: "/dashboard/text-to-video", 
   },
   {
     key: "voice-to-video",
     icon: <Speech size={20} />,
     label: "Voice to Video",
-    path: "dashboard/voice-to-video",
+    path: "/dashboard/voice-to-video", 
   },
   {
     key: "ai-chat",
     icon: <MessageSquare size={20} />,
     label: "AI Chat",
-    path: "/ai-chat",
+    path: "/dashboard/ai-chat", 
   },
   {
     key: "unlock-premium",
     icon: <Lock size={20} />,
     label: "Unlock Premium",
-    path: "/unlock-premium",
+    path: "dashboard//unlock-premium",
   },
   { key: "divider-2", type: "divider" },
   { key: "help", icon: <HelpCircle size={20} />, label: "Help", path: "/help" },
@@ -95,7 +95,7 @@ const SIDEBAR_ITEMS: MenuItem[] = [
     key: "settings",
     icon: <Settings size={20} />,
     label: "Settings",
-    path: "/settings",
+    path: "/dashboard/settings",
   },
   {
     key: "logout",
@@ -104,6 +104,8 @@ const SIDEBAR_ITEMS: MenuItem[] = [
     path: "/logout",
   },
 ];
+
+
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -187,7 +189,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 trigger={null}
                 collapsible
                 collapsed={collapsed}
-                className="bg-white h-full border-r"
+                className="h-full bg-white border-r"
                 width={240}
                 style={{
                   overflow: "auto",
@@ -197,7 +199,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 }}
               >
                 <div
-                  className="flex justify-center items-center relative"
+                  className="relative flex items-center justify-center"
                   style={{ right: collapsed ? "0px" : "32px" }}
                 >
                   <Image
@@ -215,20 +217,20 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   items={menuItems}
                   onClick={handleMenuClick}
                 />
-                <div className="absolute bottom-4 left-0 right-0 px-4">
+                <div className="absolute left-0 right-0 px-4 bottom-4">
                   <Dropdown
                     menu={{ items: dropdownItems }}
                     trigger={["click"]}
                     placement="topRight"
                   >
-                    <div className="flex items-center gap-3 cursor-pointer p-2 hover:bg-gray-100 rounded-lg">
+                    <div className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-gray-100">
                       <Avatar
                         size="large"
                         src={mockUserProfile.profile_image}
                         icon={<UserOutlined />}
                       />
                       {!collapsed && (
-                        <span className="font-bold black text-black">
+                        <span className="font-bold text-black black">
                           {mockUserProfile.full_names}
                         </span>
                       )}
@@ -239,7 +241,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <Layout>
                 <Header
                   style={{ padding: 0, background: colorBgContainer }}
-                  className="flex items-center justify-between border-b px-4"
+                  className="flex items-center justify-between px-4 border-b"
                 >
                   {/* Sidebar Toggle Button */}
                   <Button
