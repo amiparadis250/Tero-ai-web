@@ -15,7 +15,7 @@ const RegisterPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    // Add your registration logic here
+    
   };
 
   return (

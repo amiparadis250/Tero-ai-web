@@ -13,13 +13,7 @@ interface LoginFormProps {
     rememberMe: boolean;
 }
 
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * Handles the form submission event for the login page.
- * Prevents the default form submission behavior and processes
- * the login logic using the form data.
- *
-/******  13dd05b1-62ba-480d-9ab7-0bb71290bf95  *******/
+
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     // Add your login logic here
@@ -152,12 +146,13 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
                 </div>
 
                 {/* Login Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
-                >
-                  Log In
-                </button>
+                <a
+  href="/dashboard"
+  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-center block"
+>
+  Log In
+</a>
+
               </div>
             </form>
 
